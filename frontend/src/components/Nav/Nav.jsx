@@ -20,7 +20,7 @@ export default function Nav({Services_ref, About_ref}) {
                   <h2>MetaMeshLabs</h2>
                   {/* <small className='text-[10px]'>AI Automation for every Business</small> */}
                   <small className="text-[13px] font-semibold">
-                   AI  for every Business
+                   AI Automation for every Business
                   </small>
                 </span>
             </span>
