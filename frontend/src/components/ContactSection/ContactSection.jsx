@@ -388,7 +388,7 @@
 // export default ContactSection;
 import React, { useState } from "react";
 import instagram from "../../assets/instagram.png";
-import linkedin from "../../assets/linkedin.png"; // Add LinkedIn icon in assets
+import linkedin from "../../assets/linkedin.png";
 
 const ContactSection = () => {
   const [formErrors, setFormErrors] = useState({});
@@ -462,15 +462,17 @@ const ContactSection = () => {
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Query Form as main content */}
           <div className="w-full lg:w-2/3">
-            <div className="bg-[#0a2239]/80 backdrop-blur-2xl border border-blue-400/40 p-8 rounded-3xl shadow-[0_0_35px_rgba(3,114,250,0.6)] animate-[fadeIn_0.3s_ease-out]">
-              <h3 className="text-2xl font-bold text-white mb-6 text-center">Send Query</h3>
+            <div className="bg-[#0b1d2d] backdrop-blur-xl border border-blue-500/30 rounded-2xl shadow-2xl p-8 animate-[fadeIn_0.3s_ease-out]">
+              <h3 className="text-2xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 drop-shadow-[0_0_10px_rgba(3,114,250,0.7)] text-center">
+                Send Query
+              </h3>
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 <input
                   name="name"
                   type="text"
                   placeholder="Name"
-                  className={`w-full p-3 rounded-xl bg-[#102a49]/70 text-white border border-blue-500/30 focus:border-blue-400 focus:ring-2 focus:ring-blue-500/40 transition-all`}
+                  className={`w-full p-3 rounded-xl bg-[#0b1d2d]/90 text-white border border-blue-500/30 focus:border-blue-400 focus:ring-2 focus:ring-blue-500/40 transition-all`}
                 />
                 {formErrors.name && <p className="text-white text-sm">{formErrors.name}</p>}
 
@@ -478,7 +480,7 @@ const ContactSection = () => {
                   name="email"
                   type="email"
                   placeholder="Email"
-                  className={`w-full p-3 rounded-xl bg-[#102a49]/70 text-white border border-blue-500/30 focus:border-blue-400 focus:ring-2 focus:ring-blue-500/40 transition-all`}
+                  className={`w-full p-3 rounded-xl bg-[#0b1d2d]/90 text-white border border-blue-500/30 focus:border-blue-400 focus:ring-2 focus:ring-blue-500/40 transition-all`}
                 />
                 {formErrors.email && <p className="text-white text-sm">{formErrors.email}</p>}
 
@@ -486,7 +488,7 @@ const ContactSection = () => {
                   name="message"
                   rows="6"
                   placeholder="Message"
-                  className={`w-full p-3 rounded-xl bg-[#102a49]/70 text-white border border-blue-500/30 focus:border-blue-400 focus:ring-2 focus:ring-blue-500/40 transition-all`}
+                  className={`w-full p-3 rounded-xl bg-[#0b1d2d]/90 text-white border border-blue-500/30 focus:border-blue-400 focus:ring-2 focus:ring-blue-500/40 transition-all`}
                 />
                 {formErrors.message && <p className="text-white text-sm">{formErrors.message}</p>}
 
