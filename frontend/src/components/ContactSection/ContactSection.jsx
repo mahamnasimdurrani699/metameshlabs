@@ -189,8 +189,6 @@
 // export default ContactSection;
 import React, { useState } from "react";
 import instagram from "../../assets/instagram.png";
-import linkedin from "../../assets/linkedin.png";
-
 
 const ContactSection = () => {
   const [errors, setErrors] = useState({});
@@ -354,15 +352,6 @@ const ContactSection = () => {
                     >
                       <img src={instagram} className="h-5 w-5" alt="Instagram" />
                     </a>
-                    <a
-                       href=""
-                       target="_blank"
-                       className="w-10 h-10 flex items-center justify-center rounded-full 
-                      bg-blue-500/20 hover:bg-blue-500/40 transition-all"
-                     >
-                     <img src={linkedin} className="h-5 w-5" alt="LinkedIn" />
-                     </a>
-
                   </div>
                 </div>
 
