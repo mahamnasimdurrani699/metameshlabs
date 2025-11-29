@@ -540,7 +540,7 @@ const ContactSection = () => {
                     <a href="https://www.instagram.com/metameshlabs" target="_blank" className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-500/20 hover:bg-blue-500/40 transition-all shadow-[0_0_10px_rgba(3,114,250,0.6)]">
                       <img src={instagram} className="h-5 w-5" />
                     </a>
-                    <a href="/" target="_blank" className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-500/20 hover:bg-blue-500/40 transition-all shadow-[0_0_10px_rgba(3,114,250,0.6)]">
+                    <a  target="_blank" className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-500/20 hover:bg-blue-500/40 transition-all shadow-[0_0_10px_rgba(3,114,250,0.6)]">
                       <img src={linkedin} className="h-5 w-5" />
                     </a>
                   </div>
