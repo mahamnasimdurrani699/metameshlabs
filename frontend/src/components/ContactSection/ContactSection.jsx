@@ -386,31 +386,16 @@
 // };
 
 // export default ContactSection;
-
-
-
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import instagram from "../../assets/instagram.png";
 import linkedin from "../../assets/linkedin.png"; // Add LinkedIn icon in assets
-import contactImage from "../../assets/ContectUs.png";
 
 const ContactSection = () => {
-  const [isFormOpen, setIsFormOpen] = useState(false);
   const [formErrors, setFormErrors] = useState({});
-  const formRef = useRef(null);
-  const imageRef = useRef(null);
-  const [formHeight, setFormHeight] = useState("auto");
-
   const phoneNumber = "+971566550121";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     "Hello, I'm interested in your services. Can you provide more information?"
   )}`;
-
-  useEffect(() => {
-    if (imageRef.current) {
-      setFormHeight(imageRef.current.offsetHeight + "px");
-    }
-  }, [imageRef.current?.offsetHeight, window.innerWidth]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -443,8 +428,8 @@ const ContactSection = () => {
       const data = await res.json();
       if (data.success) {
         alert("🎉 Your query sent successfully!");
-        setIsFormOpen(false);
         e.target.reset();
+        setFormErrors({});
       } else {
         alert(`❌ Error: ${data.error || "Something went wrong. Please try again."}`);
       }
@@ -475,15 +460,40 @@ const ContactSection = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-12">
-          {/* Left Image */}
+          {/* Query Form as main content */}
           <div className="w-full lg:w-2/3">
-            <div className="rounded-2xl overflow-hidden shadow-[0_0_25px_rgba(3,114,250,0.5)]">
-              <img
-                ref={imageRef}
-                src={contactImage}
-                alt="Contact us"
-                className="w-full h-auto object-cover"
-              />
+            <div className="bg-[#0a2239]/80 backdrop-blur-2xl border border-blue-400/40 p-8 rounded-3xl shadow-[0_0_35px_rgba(3,114,250,0.6)] animate-[fadeIn_0.3s_ease-out]">
+              <h3 className="text-2xl font-bold text-white mb-6 text-center">Let’s Connect</h3>
+
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <input
+                  name="name"
+                  type="text"
+                  placeholder="Name"
+                  className={`w-full p-3 rounded-xl bg-[#102a49]/70 text-white border border-blue-500/30 focus:border-blue-400 focus:ring-2 focus:ring-blue-500/40 transition-all`}
+                />
+                {formErrors.name && <p className="text-red-400 text-sm">{formErrors.name}</p>}
+
+                <input
+                  name="email"
+                  type="email"
+                  placeholder="Email"
+                  className={`w-full p-3 rounded-xl bg-[#102a49]/70 text-white border border-blue-500/30 focus:border-blue-400 focus:ring-2 focus:ring-blue-500/40 transition-all`}
+                />
+                {formErrors.email && <p className="text-red-400 text-sm">{formErrors.email}</p>}
+
+                <textarea
+                  name="message"
+                  rows="6"
+                  placeholder="Message"
+                  className={`w-full p-3 rounded-xl bg-[#102a49]/70 text-white border border-blue-500/30 focus:border-blue-400 focus:ring-2 focus:ring-blue-500/40 transition-all`}
+                />
+                {formErrors.message && <p className="text-red-400 text-sm">{formErrors.message}</p>}
+
+                <button type="submit" className="w-full py-3 rounded-full text-white font-semibold bg-gradient-to-r from-blue-500 to-blue-700 shadow-[0_0_25px_rgba(3,114,250,0.7)] hover:shadow-[0_0_35px_rgba(3,114,250,1)] hover:scale-105 transition-all duration-300">
+                  🚀 Send Message
+                </button>
+              </form>
             </div>
           </div>
 
@@ -556,56 +566,8 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-
-      {/* POP-UP Query Form */}
-      {isFormOpen && (
-        <div className="fixed inset-0 bg-black/60 flex items-center justify-center p-6 backdrop-blur-sm z-50">
-          <div
-            ref={formRef}
-            style={{ height: formHeight }}
-            className="bg-[#0a2239]/80 backdrop-blur-2xl border border-blue-400/40 p-8 rounded-3xl shadow-[0_0_35px_rgba(3,114,250,0.6)] w-full max-w-lg animate-[fadeIn_0.3s_ease-out] flex flex-col justify-center"
-          >
-            <h3 className="text-2xl font-bold text-white mb-6 text-center">Let’s Connect</h3>
-
-            <form onSubmit={handleSubmit} className="space-y-4 flex flex-col justify-center h-full">
-              <input
-                name="name"
-                type="text"
-                placeholder="Name"
-                className={`w-full p-3 rounded-xl bg-[#102a49]/70 text-white border border-blue-500/30 focus:border-blue-400 focus:ring-2 focus:ring-blue-500/40 transition-all ${formErrors.name ? "placeholder-red-400" : ""}`}
-              />
-              {formErrors.name && <p className="text-red-400 text-sm">{formErrors.name}</p>}
-
-              <input
-                name="email"
-                type="email"
-                placeholder="Email"
-                className={`w-full p-3 rounded-xl bg-[#102a49]/70 text-white border border-blue-500/30 focus:border-blue-400 focus:ring-2 focus:ring-blue-500/40 transition-all ${formErrors.email ? "placeholder-red-400" : ""}`}
-              />
-              {formErrors.email && <p className="text-red-400 text-sm">{formErrors.email}</p>}
-
-              <textarea
-                name="message"
-                rows="4"
-                placeholder="Message"
-                className={`w-full p-3 rounded-xl bg-[#102a49]/70 text-white border border-blue-500/30 focus:border-blue-400 focus:ring-2 focus:ring-blue-500/40 transition-all ${formErrors.message ? "placeholder-red-400" : ""}`}
-              />
-              {formErrors.message && <p className="text-red-400 text-sm">{formErrors.message}</p>}
-
-              <button type="submit" className="w-full py-3 rounded-full text-white font-semibold bg-gradient-to-r from-blue-500 to-blue-700 shadow-[0_0_25px_rgba(3,114,250,0.7)] hover:shadow-[0_0_35px_rgba(3,114,250,1)] hover:scale-105 transition-all duration-300">
-                🚀 Send Message
-              </button>
-
-              <button type="button" onClick={() => setIsFormOpen(false)} className="w-full mt-3 py-2 rounded-full text-white font-semibold bg-gray-600/80 hover:bg-gray-700 hover:scale-105 transition-all">
-                Close
-              </button>
-            </form>
-          </div>
-        </div>
-      )}
     </section>
   );
 };
 
 export default ContactSection;
-
