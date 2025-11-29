@@ -472,7 +472,7 @@ const ContactSection = () => {
                   placeholder="Name"
                   className={`w-full p-3 rounded-xl bg-[#102a49]/70 text-white border border-blue-500/30 focus:border-blue-400 focus:ring-2 focus:ring-blue-500/40 transition-all`}
                 />
-                {formErrors.name && <p className="text-red-400 text-sm">{formErrors.name}</p>}
+                {formErrors.name && <p className="text-white text-sm">{formErrors.name}</p>}
 
                 <input
                   name="email"
@@ -480,7 +480,7 @@ const ContactSection = () => {
                   placeholder="Email"
                   className={`w-full p-3 rounded-xl bg-[#102a49]/70 text-white border border-blue-500/30 focus:border-blue-400 focus:ring-2 focus:ring-blue-500/40 transition-all`}
                 />
-                {formErrors.email && <p className="text-red-400 text-sm">{formErrors.email}</p>}
+                {formErrors.email && <p className="text-white text-sm">{formErrors.email}</p>}
 
                 <textarea
                   name="message"
@@ -488,7 +488,7 @@ const ContactSection = () => {
                   placeholder="Message"
                   className={`w-full p-3 rounded-xl bg-[#102a49]/70 text-white border border-blue-500/30 focus:border-blue-400 focus:ring-2 focus:ring-blue-500/40 transition-all`}
                 />
-                {formErrors.message && <p className="text-red-400 text-sm">{formErrors.message}</p>}
+                {formErrors.message && <p className="text-white text-sm">{formErrors.message}</p>}
 
                 <button type="submit" className="w-full py-3 rounded-full text-white font-semibold bg-gradient-to-r from-blue-500 to-blue-700 shadow-[0_0_25px_rgba(3,114,250,0.7)] hover:shadow-[0_0_35px_rgba(3,114,250,1)] hover:scale-105 transition-all duration-300">
                   🚀 Send Message
