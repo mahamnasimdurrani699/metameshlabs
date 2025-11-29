@@ -191,6 +191,7 @@ import React, { useState } from "react";
 import instagram from "../../assets/instagram.png";
 import linkedin from "../../assets/linkedin.png";
 
+
 const ContactSection = () => {
   const [errors, setErrors] = useState({});
   const phoneNumber = "+971566550121";
@@ -242,22 +243,22 @@ const ContactSection = () => {
         <div className="flex flex-col lg:flex-row gap-12 items-stretch">
           {/* LEFT SIDE — FORM */}
           <div className="w-full lg:w-2/3">
-            <div className="bg-[#0b1d2d] border border-blue-500/30 rounded-2xl shadow-2xl p-6 h-full">
+            <div className="bg-[#0b1d2d] border border-blue-500/30 rounded-2xl shadow-2xl p-8 h-full">
               <h3
-                className="text-2xl font-bold mb-4 text-transparent bg-clip-text 
+                className="text-2xl font-bold mb-6 text-transparent bg-clip-text 
                 bg-gradient-to-r from-blue-400 to-cyan-300"
               >
                 Send a Query
               </h3>
 
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-5">
                 {/* Name */}
                 <div>
                   <input
                     name="name"
                     type="text"
                     placeholder="Name"
-                    className="w-full p-2.5 rounded-xl bg-[#102a49]/70 text-white 
+                    className="w-full p-3 rounded-xl bg-[#102a49]/70 text-white 
                     border border-blue-500/30 focus:border-blue-400"
                   />
                   {errors.name && <p className="text-white text-sm mt-1">{errors.name}</p>}
@@ -269,7 +270,7 @@ const ContactSection = () => {
                     name="email"
                     type="email"
                     placeholder="Email"
-                    className="w-full p-2.5 rounded-xl bg-[#102a49]/70 text-white 
+                    className="w-full p-3 rounded-xl bg-[#102a49]/70 text-white 
                     border border-blue-500/30 focus:border-blue-400"
                   />
                   {errors.email && <p className="text-white text-sm mt-1">{errors.email}</p>}
@@ -279,9 +280,9 @@ const ContactSection = () => {
                 <div>
                   <textarea
                     name="message"
-                    rows="3"
+                    rows="4"
                     placeholder="Message"
-                    className="w-full p-2.5 rounded-xl bg-[#102a49]/70 text-white 
+                    className="w-full p-3 rounded-xl bg-[#102a49]/70 text-white 
                     border border-blue-500/30 focus:border-blue-400"
                   />
                   {errors.message && <p className="text-white text-sm mt-1">{errors.message}</p>}
@@ -311,12 +312,40 @@ const ContactSection = () => {
 
               <div className="space-y-6">
 
+                {/* Email */}
+                <div className="flex items-start">
+                  <div className="bg-blue-500/20 p-3 rounded-lg mr-4">
+                    <svg className="w-6 h-6 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-200">Email</h4>
+                    <a href="mailto:info@metameshlabs.com" className="block text-blue-300 hover:text-cyan-200">
+                      info@metameshlabs.com
+                    </a>
+                  </div>
+                </div>
+
+                {/* Phone */}
+                <div className="flex items-start">
+                  <div className="bg-blue-500/20 p-3 rounded-lg mr-4">
+                    <svg className="w-6 h-6 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-200">Phone</h4>
+                    <a href="tel:+971566550121" className="text-blue-300 hover:text-cyan-200">
+                      +971 56 655 0121
+                    </a>
+                  </div>
+                </div>
+
                 {/* Socials */}
                 <div>
                   <h4 className="font-semibold text-gray-200 mb-2">Socials</h4>
                   <div className="flex space-x-4">
-                    
-                    {/* Instagram */}
                     <a
                       href="https://www.instagram.com/metameshlabs"
                       target="_blank"
@@ -325,16 +354,14 @@ const ContactSection = () => {
                     >
                       <img src={instagram} className="h-5 w-5" alt="Instagram" />
                     </a>
-
-                    {/* LinkedIn */}
                     <a
-                      href="https://www.linkedin.com/company/metameshlabs"
-                      target="_blank"
-                      className="w-10 h-10 flex items-center justify-center rounded-full 
+                       href=""
+                       target="_blank"
+                       className="w-10 h-10 flex items-center justify-center rounded-full 
                       bg-blue-500/20 hover:bg-blue-500/40 transition-all"
-                    >
-                      <img src={linkedin} className="h-5 w-5" alt="LinkedIn" />
-                    </a>
+                     >
+                     <img src={linkedin} className="h-5 w-5" alt="LinkedIn" />
+                     </a>
 
                   </div>
                 </div>
