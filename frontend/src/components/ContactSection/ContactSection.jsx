@@ -463,7 +463,7 @@ const ContactSection = () => {
           {/* Query Form as main content */}
           <div className="w-full lg:w-2/3">
             <div className="bg-[#0a2239]/80 backdrop-blur-2xl border border-blue-400/40 p-8 rounded-3xl shadow-[0_0_35px_rgba(3,114,250,0.6)] animate-[fadeIn_0.3s_ease-out]">
-              <h3 className="text-2xl font-bold text-white mb-6 text-center">Let’s Connect</h3>
+              <h3 className="text-2xl font-bold text-white mb-6 text-center">Send Query</h3>
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 <input
@@ -500,7 +500,7 @@ const ContactSection = () => {
           {/* Right Contact Box */}
           <div className="w-full lg:w-1/3">
             <div className="bg-[#0b1d2d] backdrop-blur-xl border border-blue-500/30 rounded-2xl shadow-2xl p-8 h-full">
-              <h3 className="text-2xl font-bold mb-6 text-cyan-300">Let’s Connect</h3>
+              <h3 className="text-2xl font-bold mb-6 text-cyan-300">Get in Touch</h3>
 
               <div className="space-y-6">
                 {/* Email */}
@@ -540,7 +540,7 @@ const ContactSection = () => {
                     <a href="https://www.instagram.com/metameshlabs" target="_blank" className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-500/20 hover:bg-blue-500/40 transition-all shadow-[0_0_10px_rgba(3,114,250,0.6)]">
                       <img src={instagram} className="h-5 w-5" />
                     </a>
-                    <a href="https://www.linkedin.com/company/metameshlabs" target="_blank" className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-500/20 hover:bg-blue-500/40 transition-all shadow-[0_0_10px_rgba(3,114,250,0.6)]">
+                    <a href="/" target="_blank" className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-500/20 hover:bg-blue-500/40 transition-all shadow-[0_0_10px_rgba(3,114,250,0.6)]">
                       <img src={linkedin} className="h-5 w-5" />
                     </a>
                   </div>
