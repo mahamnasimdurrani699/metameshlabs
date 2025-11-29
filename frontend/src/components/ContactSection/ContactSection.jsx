@@ -502,7 +502,7 @@ const ContactSection = () => {
           {/* Right Contact Box */}
           <div className="w-full lg:w-1/3">
             <div className="bg-[#0b1d2d] backdrop-blur-xl border border-blue-500/30 rounded-2xl shadow-2xl p-8 h-full">
-              <h3 className="text-2xl font-bold mb-6 text-cyan-300">Get in Touch</h3>
+              <h3 className="text-2xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 drop-shadow-[0_0_10px_rgba(3,114,250,0.7)] text-center">Get in Touch</h3>
 
               <div className="space-y-6">
                 {/* Email */}
