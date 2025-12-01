@@ -56,6 +56,41 @@ body {
 }
 
 
+/* Scroll Smoothness Fix */
+html, body {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* GPU acceleration globally */
+*, *::before, *::after {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Fixed Navbar Fix */
+.navbar, header, .fixed, .sticky {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Image Rendering Optimization */
+img {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Animation optimization */
+.animate-\[fadeIn_0\.3s_ease-out\] {
+  animation: fadeIn 0.3s ease-out;
+  will-change: opacity, transform;
+  transform: translateZ(0);
+}
+
+
+
 
 
 
