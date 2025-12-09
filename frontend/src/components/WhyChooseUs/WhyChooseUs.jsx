@@ -90,10 +90,10 @@ function WhyChooseUs() {
               <div className="text-2xl font-bold text-blue-300">10+</div>
               <div className="text-sm text-gray-300">Years Experience</div>
             </div>
-            <div className="bg-gradient-to-tr from-blue-900/40 to-blue-600/10 p-4 rounded-xl text-center border border-blue-400/20">
+            {/* <div className="bg-gradient-to-tr from-blue-900/40 to-blue-600/10 p-4 rounded-xl text-center border border-blue-400/20">
               <div className="text-2xl font-bold text-blue-300">Global</div>
               <div className="text-sm text-gray-300">Clientele</div>
-            </div>
+            </div> */}
           </div>
         </motion.div>
 
