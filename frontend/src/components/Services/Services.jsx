@@ -95,8 +95,8 @@ function Services() {
           What we <span className="text-cyan-400">Offer</span>
         </h1>
         <motion.button
-          whileHover={{ scale: 1.1, boxShadow: "0px 0px 20px #00f6ff" }}
-          whileTap={{ scale: 0.95 }}
+          // whileHover={{ scale: 1.1, boxShadow: "0px 0px 20px #00f6ff" }}
+          // whileTap={{ scale: 0.95 }}
           className="mt-6 px-8 py-3 rounded-xl font-bold text-lg tracking-wide 
                      bg-gradient-to-r from-blue-600 to-cyan-500 text-white 
                      shadow-[0_0_20px_#00f6ff] animate-pulse-slow"

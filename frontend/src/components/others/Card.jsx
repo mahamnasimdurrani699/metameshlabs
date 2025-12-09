@@ -49,10 +49,8 @@ function Card({ title, description, benefits = [], imageUrl }) {
           className="w-full py-3 rounded-xl font-semibold text-lg
                      bg-gradient-to-r from-blue-500 to-blue-700
                      shadow-[0_0_15px_rgba(3,114,250,0.7)]
-                     hover:shadow-[0_0_25px_rgba(3,114,250,1)]
-                     hover:scale-[1.02] transition duration-300 mt-auto"
+                     "
         >
-          {/* Explore AI & Crypto 🚀 */}
           Automation & Digital Transformation
         </button>
       </div>
