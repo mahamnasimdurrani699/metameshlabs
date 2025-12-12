@@ -108,12 +108,16 @@ function AboutUs() {
         viewport={{ once: true }}
         className="text-center max-w-2xl mb-12"
       >
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
-          About <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">Us</span>
-        </h1>
-        <p className="text-gray-300 text-lg">
-          We are passionate about using AI to automate your business, translating business needs into technical solutions, identifying risks early, reducing operational cost and increasing productivity with minimum human effort.
-        </p>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">
+           Who <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">We Are</span>
+          </h2>
+          <p className="text-gray-300 mb-6 leading-relaxed">
+            At <span className="text-blue-400 font-semibold">Metamesh Labs</span>, we empower businesses and individuals
+            to stay ahead in the ever-changing digital economy. From Artificial Intelligence to Blockchain, we
+            provide consulting, training, and hands-on support to help you embrace the technologies shaping the future.
+            We are not just advisors — we’re your partners in transformation, ensuring smooth adoption of AI, automation,
+            and digital tools that unlock growth and efficiency.
+          </p>
       </motion.div>
 
       <div className="flex flex-col md:flex-row items-center gap-10 md:gap-20 w-full max-w-6xl">
