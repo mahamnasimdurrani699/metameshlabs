@@ -258,7 +258,7 @@ const Hero = React.lazy(() => import("./components/hero/Hero"));
 const AboutUs = React.lazy(() => import("./components/AboutUs/AboutUs"));
 const Services = React.lazy(() => import("./components/Services/Services"));
 const WhyChooseUs = React.lazy(() => import("./components/WhyChooseUs/WhyChooseUs"));
-const Testimonials = React.lazy(() => import("./components/Testimonials/Testimonials"));
+// const Testimonials = React.lazy(() => import("./components/Testimonials/Testimonials"));
 const CallToAction = React.lazy(() => import("./components/CallToAction/CallToAction"));
 const ContactSection = React.lazy(() => import("./components/ContactSection/ContactSection"));
 
@@ -275,7 +275,7 @@ const MemoizedHero = memo(Hero);
 const MemoizedAboutUs = memo(AboutUs);
 const MemoizedServices = memo(Services);
 const MemoizedWhyChooseUs = memo(WhyChooseUs);
-const MemoizedTestimonials = memo(Testimonials);
+// const MemoizedTestimonials = memo(Testimonials);
 const MemoizedCallToAction = memo(CallToAction);
 const MemoizedContactSection = memo(ContactSection);
 
@@ -297,7 +297,7 @@ function App() {
   const about_ref = useRef(null);
   const services_ref = useRef(null);
   const whychooseus_ref = useRef(null);
-  const testimonials_ref = useRef(null);
+  // const testimonials_ref = useRef(null);
   const calltoaction_ref = useRef(null);
   const contact_ref = useRef(null);
 
@@ -312,7 +312,7 @@ function App() {
     { id: "about", ref: about_ref },
     { id: "services", ref: services_ref },
     { id: "whychooseus", ref: whychooseus_ref },
-    { id: "testimonials", ref: testimonials_ref },
+    // { id: "testimonials", ref: testimonials_ref },
     { id: "calltoaction", ref: calltoaction_ref },
     { id: "contact", ref: contact_ref },
   ];
@@ -415,7 +415,7 @@ function App() {
         <div ref={services_ref}><Fade><MemoizedServices /></Fade></div>
         <div ref={whychooseus_ref}><Fade><MemoizedWhyChooseUs /></Fade></div>
         <Fade><AiMarketing /></Fade>
-        <div ref={testimonials_ref}><Fade><MemoizedTestimonials /></Fade></div>
+        {/* <div ref={testimonials_ref}><Fade><MemoizedTestimonials /></Fade></div> */}
         <div ref={calltoaction_ref}><Fade><MemoizedCallToAction /></Fade></div>
         <div ref={contact_ref}><Fade><MemoizedContactSection /></Fade></div>
       </LazyMotion>
